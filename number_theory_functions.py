@@ -50,8 +50,9 @@ def modular_exponent(a, d, n):
     mul = 1
 
     for index, bit in enumerate(binaryPower, start=1):
-        mul *= (baseModuled ** ((2 ** (index - 1)) * bit))%n
-        mul =mul % n
+        if bit != 0:
+            mul *= (baseModuled ** (2 ** (index - 1))) % n
+            mul = mul % n
 
     return mul
 
