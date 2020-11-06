@@ -44,6 +44,7 @@ def modular_exponent(a, d, n):
     -------
     b: such that b == (a**d) % n
     """
+    return (a**d) % n
 
 def miller_rabin(n):
     """
